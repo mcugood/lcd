@@ -1,0 +1,29 @@
+L 1 "..\sys\sys.c"
+N#include "sys.h"
+L 1 "..\sys\sys.h" 1
+N#ifndef __SYS_H
+N#define __SYS_H		
+N
+N
+N#define	u8 unsigned char
+N#define	u16 unsigned int
+N#define	u32 unsigned long
+N
+N
+Nvoid delayms(int count);
+N
+N
+N	  		 
+N#endif  
+N	 
+N	 
+N
+N
+N
+L 2 "..\sys\sys.c" 2
+Nvoid delayms(int count)  // /* X1ms */
+N{
+N	int i,j;
+N	for(i=0;i<count;i++)
+N		for(j=0;j<1000;j++);
+N}
